@@ -8,11 +8,27 @@
         <script src="javascript/jqinit.js"></script>
    </head>
    <body>
-       <div id="target">
+       <table>
+			   <thead>
+			     <tr>
+				    <th>Subject</th>
+					<th>Section</th>
+					<th>Semester</th>
+				 </tr>
+			   </thead>
+			   <tbody>
+			     <tr>
+					<td> <input type="text" id="subject"> </td>
+					<td> <input type="text" id="section"> </td>
+					<td> <input type="text" id="semester" value='2014-2015 1st'> </td>
+			     </tr>
+			   </tbody>
+		</table>
+	   <div id="target">
        </div>
 	   <button    
 	            class="btn btn-success btn-mini"
-	            onclick="fetchgradesheet('CSC 1', 'CS', '2014-2015 1st')">
+	            onclick="fetchgradesheet();">
 				Load..
 	   </button>
    </body>

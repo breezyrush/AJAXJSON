@@ -2,13 +2,13 @@
 var siteloc = "http://myeskwela.msuiit.edu.ph/test";
 var scriptloc = "/scripts/"
 
-function fetchgradesheet(course, section, semid)
+function fetchgradesheet()
 {
   $.ajax({
       url: siteloc + scriptloc + "getgradesheet.py",
-      data: {course:course,
-             section:section,
-             semid:semid},
+      data: {course:$("#subject").val(),
+             section:$("#section").val(),
+             semid:$("#semester").val()},
       dataType: 'json',
       success: function (res) {
                   console.log(res);
