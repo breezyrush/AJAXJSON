@@ -14,7 +14,17 @@ function fetchgradesheet(course, section, semid)
                   console.log(res);
                   if(res[0][0] != "None")
                   {
-					  table = '<table border="1">';
+				      table = '<div class="table-responsive">';
+					  table += '<table class="table table-condensed">';
+					  table += '<thead>' +
+					           '<tr>' +
+							     '<th>ID No.</th>' +
+								 '<th>Prelim</th>' +
+								 '<th>Midterm</th>' +
+								 '<th>Finals</th>' +
+							   '</tr>' +
+					           '</thead>';
+					  table += "<tbody>";		   
 					  for (i = 0; i < res.length; i++)
 					  {
 						  row = res[i];
@@ -25,7 +35,9 @@ function fetchgradesheet(course, section, semid)
 						  }
 						  table += "</tr>";
 					  }
+					  table += "</tbody>";
 					  table += "</table>";
+					  table += "</div>";
 					  $("#target").html(table); 
 				  } // end if
               }
