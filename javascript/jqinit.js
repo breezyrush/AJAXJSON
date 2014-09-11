@@ -1,4 +1,4 @@
 $(function() 
 {
-   // declare jquery elements here
+   $("#loadcontents").click(fetchgradesheet);
 }); //document on ready function
